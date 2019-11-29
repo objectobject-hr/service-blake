@@ -1,6 +1,6 @@
 var path = require('path')
-var src = path.join(__dirname, '/src')
-var dist = path.join(__dirname, '/dist')
+var src = path.join(__dirname, 'client', 'src')
+var dist = path.join(__dirname, 'client', 'dist')
 
 module.exports = {
   entry: `${src}/index.js`,

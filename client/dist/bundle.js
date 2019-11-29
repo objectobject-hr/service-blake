@@ -81,10 +81,34 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./client/src/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./client/src/Root.js":
+/*!****************************!*\
+  !*** ./client/src/Root.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar sections = ['Product description', 'Product size', 'Care instructions', 'Environment & materials', 'Package details', 'Assembly & documents', 'Reviews', 'Product availability'];\n\nfunction Root() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      justifyContent: 'center',\n      fontFamily: \"'Noto IKEA', 'Noto Sans', 'Roboto', 'Open Sans', sans-serif\"\n    }\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      maxWidth: 1200,\n      flexGrow: 1\n    }\n  }, sections.map(function (section, i) {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      key: \"section-\".concat(i)\n    }, section);\n  })));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Root);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL1Jvb3QuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jbGllbnQvc3JjL1Jvb3QuanM/ZTFhZiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXG5cbmNvbnN0IHNlY3Rpb25zID0gW1xuICAnUHJvZHVjdCBkZXNjcmlwdGlvbicsXG4gICdQcm9kdWN0IHNpemUnLFxuICAnQ2FyZSBpbnN0cnVjdGlvbnMnLFxuICAnRW52aXJvbm1lbnQgJiBtYXRlcmlhbHMnLFxuICAnUGFja2FnZSBkZXRhaWxzJyxcbiAgJ0Fzc2VtYmx5ICYgZG9jdW1lbnRzJyxcbiAgJ1Jldmlld3MnLFxuICAnUHJvZHVjdCBhdmFpbGFiaWxpdHknXG5dXG5cbmZ1bmN0aW9uIFJvb3QoKSB7XG4gIHJldHVybiAoXG4gICAgPGRpdlxuICAgICAgc3R5bGU9e3tcbiAgICAgICAgZGlzcGxheTogJ2ZsZXgnLFxuICAgICAgICBqdXN0aWZ5Q29udGVudDogJ2NlbnRlcicsXG4gICAgICAgIGZvbnRGYW1pbHk6IGAnTm90byBJS0VBJywgJ05vdG8gU2FucycsICdSb2JvdG8nLCAnT3BlbiBTYW5zJywgc2Fucy1zZXJpZmBcbiAgICAgIH19XG4gICAgPlxuICAgICAgPGRpdiBzdHlsZT17eyBtYXhXaWR0aDogMTIwMCwgZmxleEdyb3c6IDEgfX0+XG4gICAgICAgIHtzZWN0aW9ucy5tYXAoKHNlY3Rpb24sIGkpID0+IChcbiAgICAgICAgICA8ZGl2IGtleT17YHNlY3Rpb24tJHtpfWB9PntzZWN0aW9ufTwvZGl2PlxuICAgICAgICApKX1cbiAgICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IFJvb3RcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFFQTtBQUNBO0FBVUE7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBSEE7QUFEQTtBQU9BO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQUE7QUFEQTtBQU1BO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./client/src/Root.js\n");
+
+/***/ }),
+
+/***/ "./client/src/index.js":
+/*!*****************************!*\
+  !*** ./client/src/index.js ***!
+  \*****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _Root_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Root.js */ \"./client/src/Root.js\");\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Root_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), document.getElementById('blake'));//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vY2xpZW50L3NyYy9pbmRleC5qcz9mNWYxIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcbmltcG9ydCBSZWFjdERPTSBmcm9tICdyZWFjdC1kb20nXG5pbXBvcnQgUm9vdCBmcm9tICcuL1Jvb3QuanMnXG5cblJlYWN0RE9NLnJlbmRlcig8Um9vdCAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2JsYWtlJykpXG4iXSwibWFwcGluZ3MiOiJBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUVBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./client/src/index.js\n");
+
+/***/ }),
 
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
@@ -215,30 +239,6 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 "use strict";
 eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs/scheduler-tracing.development.js */ \"./node_modules/scheduler/cjs/scheduler-tracing.development.js\");\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvc2NoZWR1bGVyL3RyYWNpbmcuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvc2NoZWR1bGVyL3RyYWNpbmcuanM/NmYwNyJdLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCc7XG5cbmlmIChwcm9jZXNzLmVudi5OT0RFX0VOViA9PT0gJ3Byb2R1Y3Rpb24nKSB7XG4gIG1vZHVsZS5leHBvcnRzID0gcmVxdWlyZSgnLi9janMvc2NoZWR1bGVyLXRyYWNpbmcucHJvZHVjdGlvbi5taW4uanMnKTtcbn0gZWxzZSB7XG4gIG1vZHVsZS5leHBvcnRzID0gcmVxdWlyZSgnLi9janMvc2NoZWR1bGVyLXRyYWNpbmcuZGV2ZWxvcG1lbnQuanMnKTtcbn1cbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBLGFBRUE7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./node_modules/scheduler/tracing.js\n");
-
-/***/ }),
-
-/***/ "./src/Root.js":
-/*!*********************!*\
-  !*** ./src/Root.js ***!
-  \*********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction Root() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, \"This is the root.\"));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Root);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvUm9vdC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9Sb290LmpzPzIwYmIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuXG5mdW5jdGlvbiBSb290KCkge1xuICByZXR1cm4gKFxuICAgIDxkaXY+XG4gICAgICA8ZGl2PlRoaXMgaXMgdGhlIHJvb3QuPC9kaXY+XG4gICAgPC9kaXY+XG4gIClcbn1cblxuZXhwb3J0IGRlZmF1bHQgUm9vdFxuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUtBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/Root.js\n");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _Root_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Root.js */ \"./src/Root.js\");\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Root_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), document.getElementById('blake'));//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/YjYzNSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXG5pbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tJ1xuaW1wb3J0IFJvb3QgZnJvbSAnLi9Sb290LmpzJ1xuXG5SZWFjdERPTS5yZW5kZXIoPFJvb3QgLz4sIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdibGFrZScpKVxuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFFQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ })
 
