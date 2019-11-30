@@ -17,6 +17,10 @@ module.exports = {
           presets: ['@babel/preset-env', '@babel/preset-react'],
           plugins: ['transform-class-properties']
         }
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader']
       }
     ]
   }

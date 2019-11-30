@@ -1,4 +1,5 @@
 import React from 'react'
+import plus from './images/plus.png'
 
 const sections = [
   'Product description',
@@ -22,9 +23,18 @@ function Root() {
     >
       <div style={{ maxWidth: 1200, flexGrow: 1 }}>
         {sections.map((section, i) => (
-          <div key={`section-${i}`}>{section}</div>
+          <Section section={section} key={`section-${i}`} />
         ))}
       </div>
+    </div>
+  )
+}
+
+function Section({ section }) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', padding: 5 }}>
+      <img src={plus} height="10" width="10" style={{ padding: 22 }} />
+      <div style={{ fontSize: '1.25rem', fontWeight: 700 }}>{section}</div>
     </div>
   )
 }
