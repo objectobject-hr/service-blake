@@ -21,6 +21,7 @@
   "homepage": "https://github.com/objectobject-hr/service-blake#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "faker": "^4.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "styled-components": "^4.4.1"
