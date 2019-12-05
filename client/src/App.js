@@ -10,7 +10,7 @@ function App() {
       .get('/test')
       .then(data => setData(data.data))
       .catch(err => console.error(err))
-  })
+  }, [])
   return (
     <div
       style={{
@@ -23,9 +23,7 @@ function App() {
     >
       <div style={{ maxWidth: 1200, flexGrow: 1 }}>
         {sections.map((section, i) => (
-          <Section name={section.name} key={`section-${i}`}>
-            {React.createElement(section.component, { ...data })}
-          </Section>
+          <Section {...section} key={`section-${i}`} data={data} />
         ))}
         <hr
           style={{

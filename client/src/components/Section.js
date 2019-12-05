@@ -14,7 +14,7 @@ const StyledDiv = styled.div`
   }
 `
 
-function Section({ name, children }) {
+function Section({ name, component, data }) {
   const [open, setOpen] = useState(false)
   const [bottom, setBottom] = useState(10)
   const [opacity, setOpacity] = useState(0)
@@ -67,7 +67,7 @@ function Section({ name, children }) {
             transitionTimingFunction: 'ease-out'
           }}
         >
-          {children}
+          {React.cloneElement(component, { ...data })}
         </div>
       </div>
     </div>
