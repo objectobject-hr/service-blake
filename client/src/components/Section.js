@@ -14,7 +14,7 @@ const StyledDiv = styled.div`
   }
 `
 
-function Section({ name, data }) {
+function Section({ name, children }) {
   const [open, setOpen] = useState(false)
   const [bottom, setBottom] = useState(10)
   const [opacity, setOpacity] = useState(0)
@@ -67,7 +67,7 @@ function Section({ name, data }) {
             transitionTimingFunction: 'ease-out'
           }}
         >
-          {data}
+          {children}
         </div>
       </div>
     </div>

@@ -1,19 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Section from './components/Section'
-import Description from './components/Description'
-
-const sections = [
-  { name: 'Product description', data: <Description /> },
-  { name: 'Product size', data: 'test' },
-  { name: 'Care instructions', data: 'test' },
-  { name: 'Environment & materials', data: 'test' },
-  { name: 'Package details', data: 'test' },
-  { name: 'Assembly & documents', data: 'test' },
-  { name: 'Reviews', data: 'test' },
-  { name: 'Product availability', data: 'test' }
-]
+import sections from './data/sections'
+import axios from 'axios'
 
 function App() {
+  const [data, setData] = useState({})
+  useEffect(() => {
+    axios
+      .get('/test')
+      .then(data => setData(data.data))
+      .catch(err => console.error(err))
+  })
   return (
     <div
       style={{
@@ -26,7 +23,9 @@ function App() {
     >
       <div style={{ maxWidth: 1200, flexGrow: 1 }}>
         {sections.map((section, i) => (
-          <Section {...section} key={`section-${i}`} />
+          <Section name={section.name} key={`section-${i}`}>
+            {React.createElement(section.component, { ...data })}
+          </Section>
         ))}
         <hr
           style={{

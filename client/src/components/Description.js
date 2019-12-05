@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Description() {
+function Description(props) {
+  console.log(props)
   return (
     <div>
       <div>Description</div>
