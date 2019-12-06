@@ -14,29 +14,12 @@ const StyledDiv = styled.div`
   }
 `
 
-function Section({ name, data }) {
+function Section({ name, component, data }) {
   const [open, setOpen] = useState(false)
-  const [bottom, setBottom] = useState(10)
-  const [opacity, setOpacity] = useState(0)
-
-  useEffect(() => {
-    if (open) {
-      setTimeout(() => {
-        setBottom(0)
-        setOpacity(1)
-      })
-    } else {
-      setBottom(10)
-      setOpacity(0)
-    }
-  })
 
   return (
     <div>
-      <StyledDiv
-        onClick={() => setOpen(!open)}
-        style={{ background: open && 'hsla(0, 0%, 96%, 0.6)' }}
-      >
+      <StyledDiv onClick={() => setOpen(!open)}>
         <img
           src={plus}
           height="10"
@@ -49,27 +32,18 @@ function Section({ name, data }) {
         />
         <div style={{ fontSize: '1.25rem', fontWeight: 700 }}>{name}</div>
       </StyledDiv>
-      <div
-        style={{
-          paddingLeft: 40,
-          paddingRight: 40,
-          paddingBottom: 40,
-          display: open ? 'block' : 'none'
-        }}
-      >
+      {open && (
         <div
           style={{
-            position: 'relative',
-            bottom: bottom,
-            opacity: opacity,
-            transitionProperty: 'opacity, bottom',
-            transitionDuration: '.3s',
-            transitionTimingFunction: 'ease-out'
+            marginTop: 4,
+            paddingLeft: 40,
+            paddingRight: 40,
+            paddingBottom: 40
           }}
         >
-          {data}
+          {React.cloneElement(component, { ...data })}
         </div>
-      </div>
+      )}
     </div>
   )
 }

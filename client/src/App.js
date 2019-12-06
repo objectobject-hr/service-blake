@@ -1,19 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Section from './components/Section'
-import Description from './components/Description'
-
-const sections = [
-  { name: 'Product description', data: <Description /> },
-  { name: 'Product size', data: 'test' },
-  { name: 'Care instructions', data: 'test' },
-  { name: 'Environment & materials', data: 'test' },
-  { name: 'Package details', data: 'test' },
-  { name: 'Assembly & documents', data: 'test' },
-  { name: 'Reviews', data: 'test' },
-  { name: 'Product availability', data: 'test' }
-]
+import sections from './data/sections'
+import axios from 'axios'
 
 function App() {
+  const [data, setData] = useState()
+  useEffect(() => {
+    axios
+      .get('/test')
+      .then(data => setData(data.data))
+      .catch(err => console.error(err))
+  }, [])
+
+  console.log(data)
   return (
     <div
       style={{
@@ -21,13 +20,15 @@ function App() {
         justifyContent: 'center',
         fontFamily: `'Noto IKEA', 'Noto Sans', 'Roboto', 'Open Sans', sans-serif`,
         marginTop: 36,
-        marginBottom: 36
+        marginBottom: 36,
+        lineHeight: 1.5
       }}
     >
       <div style={{ maxWidth: 1200, flexGrow: 1 }}>
-        {sections.map((section, i) => (
-          <Section {...section} key={`section-${i}`} />
-        ))}
+        {data &&
+          sections.map((section, i) => (
+            <Section {...section} key={`section-${i}`} data={data} />
+          ))}
         <hr
           style={{
             margin: '0',

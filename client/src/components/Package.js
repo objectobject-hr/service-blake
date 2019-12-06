@@ -1,8 +1,13 @@
 import React from 'react'
 
-function Description({ product }) {
+function Package({ product }) {
   return (
     <div>
+      <div style={{ fontWeight: 'bold', marginBottom: 16 }}>
+        Packages: {product.packages}
+      </div>
+      <div style={{ fontWeight: 'bold' }}>{product.name.toUpperCase()}</div>
+      <div>{product.type}</div>
       <div
         style={{
           background: '#111',
@@ -17,9 +22,8 @@ function Description({ product }) {
       >
         {product.identifier}
       </div>
-      <div style={{ whiteSpace: 'pre-wrap' }}>{product.description}</div>
     </div>
   )
 }
 
-export default Description
+export default Package

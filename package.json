@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:client": "webpack -d --watch",
-    "dev:server": "nodemon server"
+    "dev:server": "nodemon server",
+    "db:generate": "node db/generate.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,10 @@
   },
   "homepage": "https://github.com/objectobject-hr/service-blake#readme",
   "dependencies": {
+    "axios": "^0.19.0",
     "express": "^4.17.1",
     "faker": "^4.1.0",
+    "mongoose": "^5.7.13",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "styled-components": "^4.4.1"
