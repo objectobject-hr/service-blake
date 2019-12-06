@@ -23,8 +23,8 @@ for (i = 0; i < 100; i++) {
   data.materials = faker.lorem.sentence()
   data.packages = 1
   data.name = faker.lorem.word()
-  data.productType = faker.lorem.word()
-  data.weight = rand(1, 200)
+  data.type = faker.lorem.word()
+  data.type = data.type.charAt(0).toUpperCase() + data.type.slice(1)
   products.push(data)
 }
 
@@ -77,6 +77,7 @@ function description(min, max) {
   const sentences = rand(min, max)
   let description = ''
   for (let i = 0; i < sentences; i++) {
+    if (i > 0) description += '\n\n'
     description += faker.lorem.sentence()
   }
   return description
