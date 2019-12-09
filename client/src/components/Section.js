@@ -5,7 +5,9 @@ import styled from 'styled-components'
 const StyledDiv = styled.div`
   display: flex;
   align-items: center;
-  padding: 5px;
+  padding-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border-top: 1px solid #ccc;
   cursor: pointer;
   user-select: none;
@@ -25,7 +27,7 @@ function Section({ name, component, data }) {
           height="10"
           width="10"
           style={{
-            padding: 22,
+            padding: 11,
             transform: `rotate(${open ? '-45' : '0'}deg)`,
             transition: 'transform .3s cubic-bezier(.4,0,0,1)'
           }}
