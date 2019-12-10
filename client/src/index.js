@@ -4,3 +4,5 @@ import App from './App.js'
 import './style.css'
 
 ReactDOM.render(<App />, document.getElementById('root'))
+
+module.hot.accept()
