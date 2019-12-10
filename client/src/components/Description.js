@@ -2,7 +2,7 @@ import React from 'react'
 
 function Description({ product }) {
   return (
-    <div>
+    <div style={{ paddingLeft: 40, paddingRight: 40 }}>
       <div
         style={{
           background: '#111',
@@ -10,7 +10,6 @@ function Description({ product }) {
           lineHeight: 2,
           color: '#fff',
           display: 'inline-block',
-          fontWeight: 700,
           padding: '0px 8px 0px 8px',
           marginBottom: 16
         }}

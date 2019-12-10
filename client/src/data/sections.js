@@ -5,6 +5,7 @@ import Care from '../components/Care'
 import EandM from '../components/EandM'
 import Package from '../components/Package'
 import Assembly from '../components/Assembly'
+import Availability from '../components/Availability'
 
 const sections = [
   { name: 'Product description', component: <Description /> },
@@ -14,7 +15,7 @@ const sections = [
   { name: 'Package details', component: <Package /> },
   { name: 'Assembly & documents', component: <Assembly /> },
   { name: 'Reviews', component: <Description /> },
-  { name: 'Product availability', component: <Description /> }
+  { name: 'Product availability', component: <Availability /> }
 ]
 
 export default sections
