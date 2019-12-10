@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import plus from '../images/plus.png'
-import styled from 'styled-components'
+import React, { useState } from 'react'
+import plus from '../images/plus.svg'
+import styled, { keyframes } from 'styled-components'
 
 const StyledDiv = styled.div`
   display: flex;
@@ -14,6 +14,29 @@ const StyledDiv = styled.div`
   &:hover {
     background: hsla(0, 0%, 96%, 0.6);
   }
+`
+
+const fadeIn = keyframes`
+from {
+  opacity: 0;
+  bottom: 10;
+}
+
+to {
+  opacity: 1;
+  bottom 0;
+}
+`
+
+const AnimatedDiv = styled.div`
+  animation-name: ${fadeIn};
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
 `
 
 function Section({ name, component, data }) {
@@ -35,16 +58,18 @@ function Section({ name, component, data }) {
         <div style={{ fontSize: '1.25rem', fontWeight: 700 }}>{name}</div>
       </StyledDiv>
       {open && (
-        <div
+        <AnimatedDiv
           style={{
             marginTop: 4,
-            paddingLeft: 40,
-            paddingRight: 40,
-            paddingBottom: 40
+            paddingBottom: 40,
+            display: open ? 'block' : 'none',
+            opacity: 0,
+            bottom: 10,
+            position: 'relative'
           }}
         >
           {React.cloneElement(component, { ...data })}
-        </div>
+        </AnimatedDiv>
       )}
     </div>
   )

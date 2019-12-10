@@ -2,7 +2,7 @@ import React from 'react'
 
 function Package({ product }) {
   return (
-    <div>
+    <div style={{ paddingLeft: 40, paddingRight: 40 }}>
       <div style={{ fontWeight: 'bold', marginBottom: 16 }}>
         Packages: {product.packages}
       </div>
@@ -15,7 +15,6 @@ function Package({ product }) {
           lineHeight: 2,
           color: '#fff',
           display: 'inline-block',
-          fontWeight: 700,
           padding: '0px 8px 0px 8px',
           marginBottom: 16
         }}

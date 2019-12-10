@@ -2,7 +2,7 @@ import React from 'react'
 
 function Size({ product }) {
   return (
-    <div>
+    <div style={{ paddingLeft: 40, paddingRight: 40 }}>
       <div>
         <span style={{ fontWeight: 'bold' }}>Length:</span> {product.length}"
       </div>

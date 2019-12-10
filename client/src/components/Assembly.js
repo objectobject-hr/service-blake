@@ -22,11 +22,11 @@ const StyledButton = styled.button`
   font-weight: 700;
   line-height: 1.5;
   cursor: pointer;
-  transition-property: background-color, border-radius, width;
+  transition-property: background-color, border-radius;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0, 1);
   &:hover {
-    background: #333;
+    background: #111;
     color: #fff;
     border-radius: 4px;
   }
@@ -60,7 +60,7 @@ class Assembly extends Component {
     const { product } = this.props
     const { zipMessage, input } = this.state
     return (
-      <div>
+      <div style={{ paddingLeft: 40, paddingRight: 40 }}>
         <div style={{ display: 'flex', marginBottom: 8 }}>
           <div style={{ fontWeight: 'bold', width: 115 }}>Article Number</div>
           <div style={{ fontWeight: 'bold', paddingLeft: 16 }}>
