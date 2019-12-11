@@ -1,0 +1,15 @@
+.bm-reviews-1 {
+  background-color: #0e7fd5;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px 6px 12px;
+  border-radius: 3px;
+  color: #fff;
+  line-height: 22px;
+  font-family: 'Verdana', sans-serif;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: hsl(206, 88%, 42%);
+  }
+}

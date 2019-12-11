@@ -1,0 +1,33 @@
+.bm-assembly-1 {
+  text-decoration: underline;
+  color: #0058a3;
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+    color: #3379b5;
+  }
+}
+
+.bm-assembly-2 {
+  color: #111;
+  padding: 10px;
+  width: 176px;
+  border: 2px solid #111;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+  transition-property: background-color, border-radius;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0, 1);
+  &:hover {
+    background: #111;
+    color: #fff;
+    border-radius: 4px;
+  }
+  &:active {
+    background: #333;
+    border-radius: 8px;
+  }
+}

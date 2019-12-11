@@ -5,9 +5,9 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:client": "webpack -d --watch",
-    "dev:server": "nodemon server",
-    "db:generate": "node db/generate.js"
+    "client:dev": "webpack -d --watch",
+    "server:dev": "nodemon server",
+    "db:seed": "node db/seed.js"
   },
   "repository": {
     "type": "git",
@@ -26,8 +26,10 @@
     "faker": "^4.1.0",
     "moment": "^2.24.0",
     "mongoose": "^5.7.13",
+    "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "sass-loader": "^8.0.0",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {

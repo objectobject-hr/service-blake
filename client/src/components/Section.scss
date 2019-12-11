@@ -1,0 +1,36 @@
+.bm-section-1 {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+    background: hsla(0, 0%, 96%, 0.6);
+  }
+}
+
+.bm-section-2 {
+  animation-name: fade-in;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    bottom: 10;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
