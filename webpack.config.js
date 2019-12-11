@@ -1,7 +1,6 @@
 const path = require('path')
 const src = path.join(__dirname, 'client', 'src')
 const dist = path.join(__dirname, 'client', 'dist')
-const webpack = require('webpack')
 
 module.exports = {
   entry: `${src}/index.js`,
@@ -29,10 +28,5 @@ module.exports = {
         use: ['file-loader']
       }
     ]
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
-  devServer: {
-    contentBase: './dist',
-    hot: true
   }
 }

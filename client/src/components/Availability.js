@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import truck from '../images/truck.svg'
 import greenCircle from '../images/green-circle.svg'
 import store from '../images/store.svg'
@@ -7,6 +7,8 @@ import compass from '../images/compass.svg'
 import mouse from '../images/mouse.svg'
 
 function Availability({ product }) {
+  const [selected, setSelected] = useState('select')
+  const handleSelect = e => setSelected(e.target.value)
   return (
     <div style={{ marginTop: 8 }}>
       <GrayBar icon={truck} text="Delivery" />
@@ -33,90 +35,102 @@ function Availability({ product }) {
               borderRadius: 0,
               marginBottom: 16
             }}
+            onChange={e => handleSelect(e)}
           >
-            <option>Rivendell</option>
+            <option value={'select'}>Select a store</option>
+            <option value={'rivendell'}>Rivendell</option>
           </select>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <img src={greenCircle} style={{ height: 24, marginRight: 16 }} />
-            <span style={{ fontWeight: 700 }}>In stock at Rivendell</span>
-          </div>
-          <div style={{ marginTop: 16, marginLeft: 40 }}>
-            <div style={{ marginBottom: 12 }}>
-              Currently <span style={{ fontWeight: 700 }}>1,000</span> available
-              at Rivendell.
-            </div>
-            <div style={{ fontSize: '.75rem' }}>
-              <div style={{ marginBottom: 12 }}>
-                You last checked: {moment().format('D/MM/YYYY h:mm a')}
+          {selected === 'rivendell' && (
+            <>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <img
+                  src={greenCircle}
+                  style={{ height: 24, marginRight: 16 }}
+                />
+                <span style={{ fontWeight: 700 }}>In stock at Rivendell</span>
               </div>
-              <div>
-                Prices and products in store may be different from those online.
+              <div style={{ marginTop: 16, marginLeft: 40 }}>
+                <div style={{ marginBottom: 12 }}>
+                  Currently <span style={{ fontWeight: 700 }}>1,000</span>{' '}
+                  available at Rivendell.
+                </div>
+                <div style={{ fontSize: '.75rem' }}>
+                  <div style={{ marginBottom: 12 }}>
+                    You last checked: {moment().format('D/MM/YYYY h:mm a')}
+                  </div>
+                  <div>
+                    Prices and products in store may be different from those
+                    online.
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </>
+          )}
         </div>
-        <div
-          style={{
-            padding: '16px 16px 0px 16px'
-          }}
-        >
+        {selected === 'rivendell' && (
           <div
             style={{
-              display: 'flex',
-              borderBottom: '1px solid #ccc',
-              marginBottom: 16
+              padding: '16px 16px 0px 16px'
             }}
           >
-            <img
-              style={{ height: 32, paddingLeft: 8, paddingRight: 8 }}
-              src={compass}
-            />
-            <div>
-              <div style={{ fontWeight: 700 }}>Find and buy at the store</div>
-              <div style={{ marginBottom: 8 }}>
-                Here is where you'll find the item packaged and ready for
-                purchase at the store.
-              </div>
-              <div style={{ marginBottom: 6 }}>
-                1 x{' '}
-                <span style={{ fontWeight: 700 }}>
-                  {product.name.toUpperCase()}{' '}
-                </span>
-                {product.type}
-              </div>
-              <span
-                style={{
-                  background: '#111',
-                  fontSize: '.75rem',
-                  lineHeight: 2,
-                  color: '#fff',
-                  display: 'inline-block',
-                  padding: '0px 8px 0px 8px',
-                  marginBottom: 16,
-                  marginRight: 16
-                }}
-              >
-                {product.identifier}
-              </span>
-              See a co-worker in store for purchase information.
-            </div>
-          </div>
-          <div style={{ display: 'flex' }}>
-            <img
-              style={{ height: 36, paddingLeft: 4, paddingRight: 4 }}
-              src={mouse}
-            />
-            <div>
-              <div style={{ fontWeight: 700 }}>
-                Click & collect at the store
-              </div>
+            <div
+              style={{
+                display: 'flex',
+                borderBottom: '1px solid #ccc',
+                marginBottom: 16
+              }}
+            >
+              <img
+                style={{ height: 32, paddingLeft: 8, paddingRight: 8 }}
+                src={compass}
+              />
               <div>
-                Time is precious, so save yourself a bit! Order online and
-                collect it at the store within the same day.
+                <div style={{ fontWeight: 700 }}>Find and buy at the store</div>
+                <div style={{ marginBottom: 8 }}>
+                  Here is where you'll find the item packaged and ready for
+                  purchase at the store.
+                </div>
+                <div style={{ marginBottom: 6 }}>
+                  1 x{' '}
+                  <span style={{ fontWeight: 700 }}>
+                    {product.name.toUpperCase()}{' '}
+                  </span>
+                  {product.type}
+                </div>
+                <span
+                  style={{
+                    background: '#111',
+                    fontSize: '.75rem',
+                    lineHeight: 2,
+                    color: '#fff',
+                    display: 'inline-block',
+                    padding: '0px 8px 0px 8px',
+                    marginBottom: 16,
+                    marginRight: 16
+                  }}
+                >
+                  {product.identifier}
+                </span>
+                See a co-worker in store for purchase information.
+              </div>
+            </div>
+            <div style={{ display: 'flex' }}>
+              <img
+                style={{ height: 36, paddingLeft: 4, paddingRight: 4 }}
+                src={mouse}
+              />
+              <div>
+                <div style={{ fontWeight: 700 }}>
+                  Click & collect at the store
+                </div>
+                <div>
+                  Time is precious, so save yourself a bit! Order online and
+                  collect it at the store within the same day.
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   )

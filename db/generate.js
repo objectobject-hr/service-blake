@@ -30,22 +30,24 @@ for (i = 0; i < 100; i++) {
 
 const reviews = []
 
-for (i = 0; i < 1000; i++) {
+for (i = 0; i < 300; i++) {
   const data = {}
   data.id = i + 1
-  data.valueForMoney = Math.round(Math.random() * 5)
-  data.productQuality = Math.round(Math.random() * 5)
-  data.Appearance = Math.round(Math.random() * 5)
-  data.easeOfAssembly = Math.round(Math.random() * 5)
-  data.worksAsExpected = Math.round(Math.random() * 5)
+  data.valueForMoney = rand(1, 5)
+  data.productQuality = rand(1, 5)
+  data.appearance = rand(1, 5)
+  data.ease = rand(1, 5)
+  data.worksAsExpected = rand(1, 5)
   data.username = faker.internet.userName()
   data.date = faker.date.past()
-  data.title = faker.lorem.words()
+  let title = faker.lorem.words()
+  data.title = title.charAt(0).toUpperCase() + title.slice(1)
   data.text = faker.lorem.sentences()
-  data.notHelpful = Math.round(Math.random() * 10)
-  data.helpful = Math.round(Math.random() * 20)
-  data.productId = Math.round(Math.random() * 100)
+  data.notHelpful = rand(1, 10)
+  data.helpful = rand(1, 20)
+  data.productId = rand(1, 100)
   data.recommend = faker.random.boolean()
+  data.stars = rand(1, 5)
   reviews.push(data)
 }
 
