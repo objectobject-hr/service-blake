@@ -12,8 +12,7 @@ mongoose.connect('mongodb://localhost/fec', {
 
 app.use(express.static(__dirname + '/../client/dist'))
 
-app.get('/test', (req, res) => {
-  console.log('hi')
+app.get('/reviews', (req, res) => {
   const id = rand(1, 100)
   Product.findOne({ id: id }, (err, product) => {
     if (err) console.error(err)

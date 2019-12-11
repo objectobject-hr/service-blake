@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get('/test')
+      .get('/blake')
       .then(response => {
         const data = response.data
         const averages = {
