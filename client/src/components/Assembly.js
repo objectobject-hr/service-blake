@@ -1,40 +1,6 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import './Assembly.scss'
 import rabbit from '../images/rabbit.svg'
-
-const StyledSpan = styled.span`
-  text-decoration: underline;
-  color: #0058a3;
-  cursor: pointer;
-  user-select: none;
-  &:hover {
-    color: #3379b5;
-  }
-`
-
-const StyledButton = styled.button`
-  color: #111;
-  padding: 10px;
-  width: 176px;
-  border: 2px solid #111;
-  border-radius: 2px;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.5;
-  cursor: pointer;
-  transition-property: background-color, border-radius;
-  transition-duration: 0.3s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0, 1);
-  &:hover {
-    background: #111;
-    color: #fff;
-    border-radius: 4px;
-  }
-  &:active {
-    background: #333;
-    border-radius: 8px;
-  }
-`
 
 class Assembly extends Component {
   state = {
@@ -83,9 +49,9 @@ class Assembly extends Component {
             </div>
           </div>
           <div style={{ paddingLeft: 16 }}>
-            <StyledSpan>
+            <span className="bm-assembly-1">
               {product.name.toUpperCase()} {product.message}
-            </StyledSpan>
+            </span>
           </div>
         </div>
         <img src={rabbit} style={{ height: 40, width: 200 }} />
@@ -128,9 +94,9 @@ class Assembly extends Component {
           name="input"
           placeholder="Zip Code"
         />
-        <StyledButton onClick={this.buttonClick}>
+        <button className="bm-assembly-2" onClick={this.buttonClick}>
           Check Availability
-        </StyledButton>
+        </button>
         {zipMessage && <Message message={this.state.zipMessage} />}
       </div>
     )

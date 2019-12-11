@@ -28,7 +28,7 @@ app.get('/test', (req, res) => {
   })
 })
 
-app.listen(3000, () => console.log('app listening'))
+app.listen(3003, () => console.log('app listening on port 3003'))
 
 function rand(min, max) {
   min = Math.ceil(min)
