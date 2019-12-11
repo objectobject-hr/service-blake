@@ -156,7 +156,7 @@ function Message({ message }) {
           }}
         >
           TaskRabbit is available in your area and can assemble this product for
-          $1,000,000.00
+          $1,000,000.00!
         </div>
         <div>
           Ready to assemble your product? <StyledSpan>Click here</StyledSpan>

@@ -6,6 +6,7 @@ import EandM from '../components/EandM'
 import Package from '../components/Package'
 import Assembly from '../components/Assembly'
 import Availability from '../components/Availability'
+import Reviews from '../components/Reviews/Reviews'
 
 const sections = [
   { name: 'Product description', component: <Description /> },
@@ -14,7 +15,7 @@ const sections = [
   { name: 'Environment & materials', component: <EandM /> },
   { name: 'Package details', component: <Package /> },
   { name: 'Assembly & documents', component: <Assembly /> },
-  { name: 'Reviews', component: <Description /> },
+  { name: 'Reviews', component: <Reviews /> },
   { name: 'Product availability', component: <Availability /> }
 ]
 

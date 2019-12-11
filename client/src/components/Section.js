@@ -61,7 +61,7 @@ function Section({ name, component, data }) {
         <AnimatedDiv
           style={{
             marginTop: 4,
-            paddingBottom: 40,
+            paddingBottom: component.type.name === 'Reviews' ? 0 : 40,
             display: open ? 'block' : 'none',
             opacity: 0,
             bottom: 10,

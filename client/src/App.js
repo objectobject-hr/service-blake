@@ -7,10 +7,38 @@ import styled from 'styled-components'
 
 function App() {
   const [data, setData] = useState()
+
   useEffect(() => {
     axios
       .get('/test')
-      .then(data => setData(data.data))
+      .then(response => {
+        const data = response.data
+        const averages = {
+          valueForMoney: 0,
+          productQuality: 0,
+          appearance: 0,
+          ease: 0,
+          worksAsExpected: 0,
+          overall: 0
+        }
+        const reviews = data.reviews
+        for (let i = 0; i < reviews.length; i++) {
+          averages.overall += reviews[i].stars
+          averages.valueForMoney += reviews[i].valueForMoney
+          averages.productQuality += reviews[i].productQuality
+          averages.appearance += reviews[i].appearance
+          averages.ease += reviews[i].ease
+          averages.worksAsExpected += reviews[i].worksAsExpected
+        }
+
+        for (const key in averages) {
+          averages[key] = averages[key] / reviews.length
+        }
+
+        data.averages = averages
+
+        setData(data)
+      })
       .catch(err => console.error(err))
   }, [])
 

@@ -1,6 +1,6 @@
-var path = require('path')
-var src = path.join(__dirname, 'client', 'src')
-var dist = path.join(__dirname, 'client', 'dist')
+const path = require('path')
+const src = path.join(__dirname, 'client', 'src')
+const dist = path.join(__dirname, 'client', 'dist')
 
 module.exports = {
   entry: `${src}/index.js`,
@@ -11,7 +11,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js?/,
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
