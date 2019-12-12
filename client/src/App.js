@@ -48,7 +48,7 @@ function App() {
         display: 'flex',
         justifyContent: 'center',
         fontFamily: `'Noto IKEA', 'Noto Sans', 'Roboto', 'Open Sans', sans-serif`,
-        marginTop: 36,
+        marginTop: 160,
         marginBottom: 36,
         lineHeight: 1.5
       }}
@@ -66,10 +66,15 @@ function App() {
           }}
         />
         {data && (
-          <div style={{ margin: 16 }}>
+          <div
+            style={{
+              margin: 16
+            }}
+          >
             <MoreButton name={data.product.name} />
           </div>
         )}
+        <div style={{ borderBottom: '1px solid #ccc', marginBottom: 48 }} />
       </div>
     </div>
   )
