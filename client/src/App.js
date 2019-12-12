@@ -48,7 +48,7 @@ function App() {
         display: 'flex',
         justifyContent: 'center',
         fontFamily: `'Noto IKEA', 'Noto Sans', 'Roboto', 'Open Sans', sans-serif`,
-        marginTop: 160,
+        marginTop: 100,
         marginBottom: 36,
         lineHeight: 1.5
       }}
