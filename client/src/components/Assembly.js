@@ -125,7 +125,8 @@ function Message({ message }) {
           $1,000,000.00!
         </div>
         <div>
-          Ready to assemble your product? <StyledSpan>Click here</StyledSpan>
+          Ready to assemble your product?{' '}
+          <span className="bm-assembly-1">Click here</span>
         </div>
       </div>
     )
