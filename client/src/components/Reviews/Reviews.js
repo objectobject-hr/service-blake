@@ -41,8 +41,8 @@ function Reviews({ reviews, averages }) {
           >
             <StarReviews reviews={reviews} />
             <Ratings averages={averages} />
-            <HelpfulReview reviews={reviews} type="favorable" />
-            <HelpfulReview reviews={reviews} type="critical" />
+            <HelpfulReview reviews={reviews} type="Favorable" />
+            <HelpfulReview reviews={reviews} type="Critical" />
           </div>
         </div>
       </div>
