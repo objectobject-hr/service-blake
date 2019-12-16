@@ -27,13 +27,14 @@ function Reviews({ reviews, averages }) {
         <div
           style={{
             fontSize: '11px',
-            fontFamily: 'Open Sans", sans-serif'
+            fontFamily: 'Open Sans", sans-serif',
+            width: '100%'
           }}
         >
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: '50% 50%',
+              gridTemplateColumns: 'repeat(2, 1fr)',
               gridColumnGap: 50,
               gridRowGap: 16,
               paddingLeft: 20
